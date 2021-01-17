@@ -3,45 +3,45 @@ import numpy as np
 def calculate(list):
     mean = []
     variance = []
-    standardDeviation = []
+    StandardDeviation = []
     maximum = []
     minimum = []
     total = []
 
-    arr = np.array(list)
+    a = np.array(list)
     try:
-        arr = np.reshape(arr, (3, 3))
+        a = np.reshape(a, (3, 3))
     except:
         raise ValueError("List must contain nine numbers.")
 
-    mean.append(np.mean(arr, axis=0).tolist())
-    mean.append(np.mean(arr, axis=1).tolist())
-    mean.append(np.mean(arr).tolist())
+    mean.append(np.mean(a, axis=0).tolist())
+    mean.append(np.mean(a, axis=1).tolist())
+    mean.append(np.mean(a).tolist())
 
-    variance.append(np.var(arr, axis=0).tolist())
-    variance.append(np.var(arr, axis=1).tolist())
-    variance.append(np.var(arr).tolist())
+    variance.append(np.var(a, axis=0).tolist())
+    variance.append(np.var(a, axis=1).tolist())
+    variance.append(np.var(a).tolist())
 
-    standardDeviation.append(np.std(arr, axis=0).tolist())
-    standardDeviation.append(np.std(arr, axis=1).tolist())
-    standardDeviation.append(np.std(arr).tolist())
+    StandardDeviation.append(np.std(a, axis=0).tolist())
+    StandardDeviation.append(np.std(a, axis=1).tolist())
+    StandardDeviation.append(np.std(a).tolist())
 
-    maximum.append(np.amax(arr, axis=0).tolist())
-    maximum.append(np.amax(arr, axis=1).tolist())
-    maximum.append(np.amax(arr).tolist())
+    maximum.append(np.amax(a, axis=0).tolist())
+    maximum.append(np.amax(a, axis=1).tolist())
+    maximum.append(np.amax(a).tolist())
 
-    minimum.append(np.amin(arr, axis=0).tolist())
-    minimum.append(np.amin(arr, axis=1).tolist())
-    minimum.append(np.amin(arr).tolist())
+    minimum.append(np.amin(a, axis=0).tolist())
+    minimum.append(np.amin(a, axis=1).tolist())
+    minimum.append(np.amin(a).tolist())
 
-    total.append(np.sum(arr, axis=0).tolist())
-    total.append(np.sum(arr, axis=1).tolist())
-    total.append(np.sum(arr).tolist())
+    total.append(np.sum(a, axis=0).tolist())
+    total.append(np.sum(a, axis=1).tolist())
+    total.append(np.sum(a).tolist())
 
     calculations = {
         'mean': mean,
         'variance': variance,
-        'standard deviation': standardDeviation,
+        'standard deviation': StandardDeviation,
         'max': maximum,
         'min': minimum,
         'sum': total
